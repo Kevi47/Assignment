@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MouseEvent } from "react";
 
-function ForgotPass(props) {
+function ForgotPass(props:any) {
   const [femail, setfemail] = useState("");
   const [fpass, setfpass] = useState("");
   const [fcpass, setfcpass] = useState("");

@@ -20,7 +20,8 @@ function Login() {
           email: email,
           password: pass,
         }
-      );
+        );
+        console.log(response)
       setvalidState(true);
       setformState(false);
     } catch (err) {

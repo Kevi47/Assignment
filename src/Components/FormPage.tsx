@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 import "react-phone-number-input/style.css";
-import PhoneInput, {
-  isPossiblePhoneNumber,
-  isValidPhoneNumber,
-} from "react-phone-number-input";
+import PhoneInput from "react-phone-number-input";
 import axios from "axios";
 
-function FormPage(props) {
+function FormPage(props: any) {
   const [nextC, setnextC] = useState(false);
   const [nextC1, setnextC1] = useState(false);
   const [nextC2, setnextC2] = useState(false);
@@ -14,8 +11,8 @@ function FormPage(props) {
   const [loc, setloc] = useState("");
 
   const [ename, setename] = useState("");
-  const [eemail, seteemail] = useState("");
-  const [ephno, setephno] = useState();
+  const [eemail, seteemail] = useState('');
+  const [ephno, setephno] = useState<string | undefined>();
   const [add1, setadd1] = useState("");
   const [add2, setadd2] = useState("");
   const [city, setcity] = useState("");
@@ -32,7 +29,7 @@ function FormPage(props) {
       setbarStatus(1);
       seteemail("");
       setename("");
-      setephno("");
+      setephno('');
     }
   };
 
@@ -114,7 +111,7 @@ function FormPage(props) {
               <PhoneInput
                 defaultCountry="IN"
                 value={ephno}
-                onChange={(ephno) => setephno(ephno)}
+                onChange={(value)=>setephno(value)}
                 className={
                   ephno == ""
                     ? "focus:outline-none border-b-2 h-8 border-red-800 rounded-md w-6/7 bg-transparent pl-1"
